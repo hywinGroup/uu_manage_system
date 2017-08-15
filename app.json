@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/scan/scan"
+  ],
+  "window": {    
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#c81624",
+    "navigationBarTextStyle":"fff",
+    "navigationBarTitleText": "UU摆书"
+  },
+  "tabBar": {    
+    "color": "#5c5c5c",
+    "selectedColor": "#c81624",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/icon_index.png",
+      "selectedIconPath":"images/icon_index_cur.png",
+      "text": "首页"
+    },{
+      "pagePath": "pages/scan/scan",
+      "iconPath": "images/icon_scan.png",
+      "selectedIconPath":"images/icon_scan_cur.png",
+      "text": "还书"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
