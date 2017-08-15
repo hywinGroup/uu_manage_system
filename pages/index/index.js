@@ -9,34 +9,19 @@ Page({
   onReady: function() {
     // Do something when page ready.
   },
-  onShow: function() {
-    // Do something when page show.
+  backBook:function(){
+    //扫码还书
   },
-  onHide: function() {
-    // Do something when page hide.
+  addBook:function(){
+    //扫码加书
   },
-  onUnload: function() {
-    // Do something when page close.
+  manageBook:function() {
+    //管理绘本
   },
-  onPullDownRefresh: function() {
-    // Do something when pull down.
+  setAddress:function(){
+    //设置位置，有参数设置参数值{}，无参设置当前
   },
-  onReachBottom: function() {
-    // Do something when page reach bottom.
-  },
-  onShareAppMessage: function () {
-   // return custom share data when user share.
-  },
-  onPageScroll: function() {
-    // Do something when page scroll
-  },
-  // Event handler.
-  viewTap: function() {
-    this.setData({
-      text: 'Set some data for updating view.'
-    })
-  },
-  customData: {
-    hi: 'MINA'
+  openMap:function(){
+    //打开地图，标注当前位置
   }
 })

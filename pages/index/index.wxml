@@ -1,1 +1,12 @@
-<view>{{text}}</view>
+<view>
+	<view class="oprate-btns">
+	<button bindtap="backBook" class="btn-primary" hover-class="btn-primary-hover">扫码还书</button>
+	<button bindtap="addBook" class="btn-primary" hover-class="btn-primary-hover">扫码加书</button>
+	<button bindtap="manageBook" class="btn-primary" hover-class="btn-primary-hover">管理绘本</button>
+	</view>
+	<view class="set-address">
+    <view class="label">设置借阅地点：</view>
+    <view class="btn" bindtap="setAddress">当前位置</view>
+    <view class="btn" bindtap="openMap">选择地图</view>
+  </view>
+</view>

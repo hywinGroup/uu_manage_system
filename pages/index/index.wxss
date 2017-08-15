@@ -1,0 +1,26 @@
+.oprate-btns{
+	width:60%;
+	margin-left:20%;
+	padding-top:40rpx;
+}
+.oprate-btns .btn-primary{
+	margin-top:60rpx;
+}
+.set-address{
+  margin-top:80rpx;
+  display: flex;
+  justify-content:center;
+}
+.set-address .label,.set-address .btn{
+  line-height: 44rpx;
+}
+.set-address .label{
+  font-size:34rpx;
+}
+.set-address .btn{
+  font-size:30rpx;
+  padding:0 16rpx;
+  border:solid 2rpx #ccc;
+  border-radius: 10rpx;
+  margin-left:10rpx;
+}
