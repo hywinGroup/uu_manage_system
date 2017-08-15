@@ -1,0 +1,24 @@
+<view class="search-hd">
+    <view class="search-keyword">
+        <view class="searchList">
+          <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="handleToggle">{{hotKeywordItem}}<i class="iconfont icon-xuanzhong"></i></view>
+        </view>
+
+        <view class="content">
+            <block wx:for-items="{{searchItems}}" >
+              <view data-parentId ="{{index}}">
+                <view class="search-keyword-title">{{item.title}}</view>
+                <view class="search-keyword-item {{item.currentItem == index?'selected':'normal'}}" wx:for="{{item.Arr}}" wx:for-item="childItem" bindtap="handleToggle" data-id ="{{index}}">  
+                  {{childItem}}<i class="iconfont icon-xuanzhong"></i>
+                </view>
+              </view>
+            </block>
+        </view>       
+    </view>
+</view>
+<view class="books-container">
+  <import src="../../component/result/result.wxml"/>
+  <view class="book" wx:for-items="{{items}}" wx:key="*this" bindtap="goToDetail" data-id="{{item.id}}">
+    <template is="isResult" data="{{...item}}"/>
+  </view>
+</view>
