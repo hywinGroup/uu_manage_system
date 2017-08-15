@@ -1,0 +1,19 @@
+
+<view class="code-container">
+
+    <view wx:for="{{codeList}}" wx:for-item="item"  wx:key="*this">
+        <view hidden="{{index != currentIndex}}">         
+            <canvas style="width: 686rpx;height: 686rpx;background:#f1f1f1;margin:0 auto;" canvas-id="canvas-{{index}}"/>
+            <view class="alignR item-desc">当前为第{{index + 1}}张</view>
+            <view class="alignR item-desc">bookId:{{item}}</view>
+        </view>
+    </view>
+    <view class="alignR title">共{{codeList.length}}张照片</view>
+
+    <view class="footer-btn">
+        <button hidden="{{currentIndex == 9}}" bindtap="nextCode" class="btn-primary" hover-class="btn-primary-hover">下一个</button>
+        <button hidden="{{currentIndex == 0}}" bindtap="preCode" class="btn-primary" hover-class="btn-primary-hover">上一个</button>
+    </view>
+</view>
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box"></view>

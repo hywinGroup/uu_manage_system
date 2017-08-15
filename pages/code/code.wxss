@@ -1,0 +1,18 @@
+.code-container .title{
+ line-height: 40rpx;
+  font-size:32rpx;
+  padding-right:30rpx;
+}
+.footer-btn{
+  width:80%;
+  margin-left:10%;
+  padding-top:20rpx;
+}
+.footer-btn .btn-primary{
+	margin-top:20rpx;
+}
+.code-container .item-desc{
+  line-height: 40rpx;
+  font-size:30rpx;
+  padding-right:30rpx;
+}
