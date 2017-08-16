@@ -20,6 +20,9 @@ Page({
   },
   addBook:function(){
     //扫码加书
+    wx.navigateTo({
+      url: '../detail/detail'
+    })
   },
   manageBook:function() {
     //管理绘本
