@@ -117,3 +117,20 @@ body{
 	background: -moz-linear-gradient(#f89e2a, #f8af52,#f89e2a); /* Firefox 3.6 - 15 */
 	background: linear-gradient(#f89e2a, #f8af52,#f89e2a); /* 标准的语法 */
 }
+.btn-primary-disabled{
+  background: -webkit-linear-gradient(#ccc, #bbb8b8,#ccc); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#ccc, #bbb8b8,#ccc); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#ccc, #bbb8b8,#ccc); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#ccc, #bbb8b8,#ccc); /* 标准的语法 */
+}
+
+.input {
+	padding:5rpx 10rpx;
+	font-size:28rpx;
+	border:solid 1px #ccc;
+	color:#333;
+  border-radius:8rpx;
+}
+.input-placeholder-class{
+	color:#ccc;
+}

@@ -1,12 +1,33 @@
 <view>
 	<view class="oprate-btns">
-	<button bindtap="backBook" class="btn-primary" hover-class="btn-primary-hover">扫码还书</button>
-	<button bindtap="addBook" class="btn-primary" hover-class="btn-primary-hover">扫码加书</button>
-	<button bindtap="manageBook" class="btn-primary" hover-class="btn-primary-hover">管理绘本</button>
+	<button bindtap="backBook" class="btn-primary btn-first" hover-class="btn-primary-hover">扫码还书</button>
+	<button bindtap="addBook" class="btn-primary btn-sec" hover-class="btn-primary-hover">扫码加书</button>
+	<button bindtap="manageBook" class="btn-primary btn-third" hover-class="btn-primary-hover">管理绘本</button>
 	</view>
-	<view class="set-address">
-    <view class="label">设置借阅地点：</view>
-    <view class="btn" bindtap="setAddress">当前位置</view>
-    <view class="btn" bindtap="openMap">选择地图</view>
+  <view class="form">
+  	<view class="block">
+	  	<view class="label">门店名称：</view>
+	  	<view class="detail">
+	  		<input type="tel" bindinput="changeName" name="tel" placeholder="如：新华书店莘庄店" class="input" placeholder-class="input-placeholder-class"/>
+	  	</view>
+  	</view>
+  	<!--
+	<view class="block">
+		<view class="label">联系方式：</view>
+		<view class="detail">
+    		<input type="tel"  name="tel" placeholder="如：新华书店莘庄店" class="input" placeholder-class="input-placeholder-class"/>
+    	</view>
+	</view>
+	-->  
+	<view class="block">
+		<view class="label">借阅地点：</view>
+		<view class="detail address">
+	    	<view class="btn" bindtap="setAddress">当前位置</view>
+	    	<view class="btn" bindtap="openMap">选择地图</view>
+    	</view>
+	</view>
+    <button wx:if="{{storeName && storeLatitude && storeLongitude}}" type="button" bindtap="submitAddress" class="btn-primary" style="width:66%;margin-top:30rpx;">提交</button>
+    <button wx:if="{{!storeName || !storeLatitude || !storeLongitude}}" type="button" class="btn-primary btn-primary-disabled" style="width:66%;margin-top:30rpx;">提交</button>
   </view>
+
 </view>
