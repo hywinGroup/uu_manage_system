@@ -1,0 +1,68 @@
+<scroll-view scroll-y class="detail">
+
+	<view class="book-detail">
+			<image class="book-img" src="{{book.images.large}}"  />
+      <view class="book-items">
+        <view class="title">小王子</view>
+        <view>作者</view>
+        <view>绘本Id</view>
+      </view>
+  </view>
+
+  <view class="book-detail">
+      <label>设置简介：</label>  	
+      <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+  </view>
+  
+  <view class="book-detail">
+    <textarea auto-height placeholder="设置关键字，多个关键字可用；隔开" />
+	</view>
+
+  <view class="book-spec">   
+    <view class="section">
+      <label class="section-title">设置语种</label>
+      <picker mode="selector" bindchange="bindPickerLanguages" value="{{index}}" range="{{languages}}">
+        <view class="picker">
+          当前选择：{{languages[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <label class="section-title">设置适龄儿童</label>
+      <picker mode="selector" bindchange="bindPickerAge" value="{{index}}" range="{{age}}">
+        <view class="picker">
+          当前选择：{{age[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <label class="section-title">设置主题</label>
+      <picker mode="selector" bindchange="bindPickerTheme" value="{{index}}" range="{{theme}}">
+        <view class="picker">
+          当前选择：{{theme[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <label>是否加入首页推荐</label>
+    </view>
+
+    <view class="section">
+      <label class="section-title">设置绘本状态</label>
+      <picker mode="selector" bindchange="bindPickerStatu" value="{{index}}" range="{{statu}}">
+        <view class="picker">
+           当前选择：{{statu[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <label>设置价格</label>
+    </view>
+
+  </view>
+
+
+</scroll-view>
