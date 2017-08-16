@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/scan/scan",
-    "pages/code/code"
+    "pages/code/code",
+    "pages/back/back"
   ],
   "window": {    
     "backgroundTextStyle":"light",

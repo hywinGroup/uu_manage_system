@@ -17,6 +17,19 @@ Page({
   },
   backBook:function(){
     //扫码还书
+
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        var bookId = res.result;
+        wx.navigateTo({
+            url: '../back/back?bookId='+bookId
+        })
+      }
+    })
+        // wx.navigateTo({
+        //     url: '../back/back?bookId='+"1000001"
+        // })
   },
   addBook:function(){
     //扫码加书
