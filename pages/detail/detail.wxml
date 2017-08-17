@@ -31,7 +31,7 @@
       <label class="section-title">设置适龄儿童</label>
       <picker mode="selector" bindchange="bindPickerAge" value="{{index}}" range="{{age}}">
         <view class="picker">
-          当前选择：{{age[index]}}
+          当前选择：{{age[index2]}}
         </view>
       </picker>
     </view>
@@ -40,7 +40,7 @@
       <label class="section-title">设置主题</label>
       <picker mode="selector" bindchange="bindPickerTheme" value="{{index}}" range="{{theme}}">
         <view class="picker">
-          当前选择：{{theme[index]}}
+          当前选择：{{theme[index1]}}
         </view>
       </picker>
     </view>
@@ -53,7 +53,7 @@
       <label class="section-title">设置绘本状态</label>
       <picker mode="selector" bindchange="bindPickerStatu" value="{{index}}" range="{{statu}}">
         <view class="picker">
-           当前选择：{{statu[index]}}
+           当前选择：{{statu[index3]}}
         </view>
       </picker>
     </view>

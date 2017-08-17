@@ -1,6 +1,6 @@
 'use strict'
 
-var host = "https://www.easy-mock.com/mock/5993afeba1d30433d8631685/store";
+var host = "https://www.easy-mock.com/mock/5993afeba1d30433d8631685/uu_manage";
 
 var appId = "wxdecafe98251c1548";
 //为了安全，appSecret 维护在后端
@@ -8,5 +8,6 @@ var appId = "wxdecafe98251c1548";
 
 module.exports = {
 	appId : `${appId}`,
-	setAddress:`${host}`+"/setLocation"
+	setAddress:`${host}`+"/store/setLocation", //设置位置
+	searchBook : `${host}`+"/book/searchBook"  //搜索书籍
 }
