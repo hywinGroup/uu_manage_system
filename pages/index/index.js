@@ -18,18 +18,18 @@ Page({
   backBook:function(){
     //扫码还书
 
-    wx.scanCode({
-      onlyFromCamera: true,
-      success: (res) => {
-        var bookId = res.result;
+    // wx.scanCode({
+    //   onlyFromCamera: true,
+    //   success: (res) => {
+    //     var bookId = res.result;
+    //     wx.navigateTo({
+    //         url: '../back/back?bookId='+bookId
+    //     })
+    //   }
+    // })
         wx.navigateTo({
-            url: '../back/back?bookId='+bookId
+            url: '../back/back?bookId='+"1000001"
         })
-      }
-    })
-        // wx.navigateTo({
-        //     url: '../back/back?bookId='+"1000001"
-        // })
   },
   addBook:function(){
     //扫码加书
@@ -113,9 +113,13 @@ Page({
   },
   changeName:function(e){
     //console.log(e.detail.value);
-    this.setData({
-      storeName:e.detail.value
-    });
+    var v = util.trim(e.detail.value);
+    if(this.data.storeName != v){    
+      this.setData({
+        storeName:v
+      });
+      console.log(v);
+    }
   },
   chooseLocation:function(){
     var self = this;
