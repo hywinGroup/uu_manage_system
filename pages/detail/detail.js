@@ -1,4 +1,5 @@
-// pages/detail/detail.js
+'use strict'
+
 Page({
 
   /**
@@ -8,7 +9,13 @@ Page({
     languages: ['中文', '英文'],
     age: ['0-2岁', '3-6岁', '7-9岁', '9岁以上'],
     theme: ['交通工具', '情绪管理', '友情', '亲情', '入园', '性教育', '无字书', '音乐', '古诗词', '儿歌', '建筑', '幽默', '科普'],
-    statu: ['借出中', '展出中','已下架'],
+    status: ['借出中', '展出中','已下架'],
+    indexs:{
+      languages:0,
+      age : 0,
+      theme: 0,
+      status : 0
+    }
   },
 
   /**
@@ -17,9 +24,13 @@ Page({
   onLoad: function (options) {
   
   },
-  bindPickerLanguages: function(e) {
+  bindPickerValue:function(e){
+    var self = this;
+    var keyname = e.target.dataset.name;
+    var indexs  = self.data.indexs;
+    indexs[keyname] = parseInt(e.detail.value);
     this.setData({
-      index: e.detail.value
+      indexs:indexs
     })
   },
   bindTextAreaBlur:function(e){

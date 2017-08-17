@@ -4,7 +4,8 @@
     "pages/scan/scan",
     "pages/code/code",
     "pages/back/back",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/manage/manage"
   ],
   "window": {    
     "backgroundTextStyle":"light",

@@ -18,18 +18,18 @@ Page({
   backBook:function(){
     //扫码还书
 
-    // wx.scanCode({
-    //   onlyFromCamera: true,
-    //   success: (res) => {
-    //     var bookId = res.result;
-    //     wx.navigateTo({
-    //         url: '../back/back?bookId='+bookId
-    //     })
-    //   }
-    // })
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        var bookId = res.result;
         wx.navigateTo({
-            url: '../back/back?bookId='+"1000001"
+            url: '../back/back?bookId='+bookId
         })
+      }
+    })
+        // wx.navigateTo({
+        //     url: '../back/back?bookId='+"1000001"
+        // })
   },
   addBook:function(){
     //扫码加书
@@ -39,6 +39,9 @@ Page({
   },
   manageBook:function() {
     //管理绘本
+    wx.navigateTo({
+      url: '../manage/manage'
+    })
   },
   setAddress:function(event,obj){
     //设置位置，有参数设置参数值{}，无参设置当前

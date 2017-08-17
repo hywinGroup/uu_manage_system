@@ -21,26 +21,26 @@
   <view class="book-spec">   
     <view class="section">
       <label class="section-title">设置语种</label>
-      <picker mode="selector" bindchange="bindPickerLanguages" value="{{index}}" range="{{languages}}">
+      <picker mode="selector" data-name="languages" bindchange="bindPickerValue" value="{{indexs.languages}}" range="{{languages}}">
         <view class="picker">
-          当前选择：{{languages[index]}}
+          当前选择：{{languages[indexs.languages]}}
         </view>
       </picker>
     </view>
     <view class="section">
       <label class="section-title">设置适龄儿童</label>
-      <picker mode="selector" bindchange="bindPickerAge" value="{{index}}" range="{{age}}">
+      <picker mode="selector" data-name="age" bindchange="bindPickerValue" value="{{indexs.age}}" range="{{age}}">
         <view class="picker">
-          当前选择：{{age[index]}}
+          当前选择：{{age[indexs.age]}}
         </view>
       </picker>
     </view>
 
     <view class="section">
       <label class="section-title">设置主题</label>
-      <picker mode="selector" bindchange="bindPickerTheme" value="{{index}}" range="{{theme}}">
+      <picker mode="selector" data-name="theme" bindchange="bindPickerValue" value="{{indexs.theme}}" range="{{theme}}">
         <view class="picker">
-          当前选择：{{theme[index]}}
+          当前选择：{{theme[indexs.theme]}}
         </view>
       </picker>
     </view>
@@ -51,9 +51,9 @@
 
     <view class="section">
       <label class="section-title">设置绘本状态</label>
-      <picker mode="selector" bindchange="bindPickerStatu" value="{{index}}" range="{{statu}}">
+      <picker mode="selector" data-name="status" bindchange="bindPickerValue" value="{{indexs.status}}" range="{{status}}">
         <view class="picker">
-           当前选择：{{statu[index]}}
+           当前选择：{{status[indexs.status]}}
         </view>
       </picker>
     </view>
