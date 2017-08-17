@@ -123,6 +123,10 @@ body{
 	background: -moz-linear-gradient(#ccc, #bbb8b8,#ccc); /* Firefox 3.6 - 15 */
 	background: linear-gradient(#ccc, #bbb8b8,#ccc); /* 标准的语法 */
 }
+.btn-num{
+	top:2rpx;
+	position:relative;
+}
 
 .input {
 	padding:5rpx 10rpx;

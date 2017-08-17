@@ -81,7 +81,15 @@ function get3rdSession() {
 	}
 	return session;
 }
+function trim(s){
+	if (typeof s != "string") return s;
+	var partern = /^(\s)*|(\s)*$/g;
+	return s.replace(partern,"");
+}
 module.exports = {
 	doPost,
-	doGet
+	doGet,
+	trim,
+	set3rdSession,
+	get3rdSession
 }
