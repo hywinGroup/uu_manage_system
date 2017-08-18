@@ -12,7 +12,6 @@
   from {transform: rotate(0deg)}
   to {transform: rotate(360deg)}
 }
-
 @-webkit-keyframes spin-loading 
 {
   from {transform: rotate(0deg)}
@@ -30,6 +29,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  margin-left: -40rpx;
   -webkit-animation: spin-loading .5s linear infinite;
   -moz-animation: spin-loading .5s linear infinite;
   -ms-animation: spin-loading .5s linear infinite;

@@ -11,14 +11,6 @@
 	  		<input type="tel" bindinput="changeName" name="tel" placeholder="如：新华书店莘庄店" class="input" placeholder-class="input-placeholder-class"/>
 	  	</view>
   	</view>
-  	<!--
-	<view class="block">
-		<view class="label">联系方式：</view>
-		<view class="detail">
-    		<input type="tel"  name="tel" placeholder="如：新华书店莘庄店" class="input" placeholder-class="input-placeholder-class"/>
-    	</view>
-	</view>
-	-->  
 	<view class="block">
 		<view class="label">借阅地点：</view>
 		<view class="detail address">
@@ -29,5 +21,9 @@
     <button wx:if="{{storeName && storeLatitude && storeLongitude}}" type="button" bindtap="submitAddress" class="btn-primary" style="width:66%;margin-top:30rpx;">提交</button>
     <button wx:if="{{!storeName || !storeLatitude || !storeLongitude}}" type="button" class="btn-primary btn-primary-disabled" style="width:66%;margin-top:30rpx;">提交</button>
   </view>
-
+  <view class="invite-code" wx:if="{{isSuper}}">
+	  <button bindtap="createInviteCode" class="btn-primary btn-third" hover-class="btn-primary-hover">生成邀请码</button>
+  </view>
 </view>
+<import src="../../component/pureloading/pureloading.wxml"/>
+<template wx:if="{{loading}}" is="pureloading"/> 

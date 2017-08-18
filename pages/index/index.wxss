@@ -67,3 +67,14 @@
 .block .address{
   display:flex;
 }
+.invite-code {
+  position: absolute;
+  bottom:40rpx;
+  right:30rpx;
+  width:160rpx;
+}
+.invite-code .btn-primary{
+  font-size:24rpx;
+  padding:0;
+}
+

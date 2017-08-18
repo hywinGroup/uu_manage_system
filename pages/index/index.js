@@ -1,23 +1,67 @@
 'use strict'
 import util from "../../utils/util";
 import config from "../../config";
+import ES6Promise from "../../utils/es6-promise";
 
 Page({
   data: {
+    loading:true,
     text: "This is index page data.",
     storeName:null,
     storeLatitude :null,
-    storeLongitude :null
+    storeLongitude :null,
+    isSuper:false
   },
   onLoad: function(options) {
-    // Do some initialize when page load.
+    // options 中的 scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
+    //TODO，邀请码应该是放在这里面的
+    //var scene = decodeURIComponent(options.scene)
+
+    var self = this;
+    // setTimeout(function(){
+    //    self.setData({
+    //     loading : false
+    //    });
+    // },20000);
+    var scene = options.scene ? decodeURIComponent(options.scene) : null,code = "";
+    self.getJsCode().then(function(res){
+        console.log("login success*****"+res.code);
+        code = res.code;
+        //self.checkUser(code,scene);
+        self.setData({
+          loading : false
+        });
+    },function(res){
+        console.log("login fail*****"+res);
+    });
+  },
+  getJsCode:function(){
+    return new ES6Promise.Promise(function(resolve, reject) {
+        wx.login({
+          success:function(res){
+            resolve(res);
+          },
+          fail:function(res){
+            reject(res);
+          }
+        });
+    });
+  },
+  checkUser:function(jsCode,inviteCode){
+    /*TODO 
+    验证用户信息，去服务端请求查看 用户身份
+    1，普通管理员
+    2，超级管理员
+    3，新注册管理员
+    4，不是管理员且邀请码非法
+    */
+
   },
   onReady: function() {
     // Do something when page ready.
   },
   backBook:function(){
     //扫码还书
-
     wx.scanCode({
       onlyFromCamera: true,
       success: (res) => {
@@ -27,9 +71,6 @@ Page({
         })
       }
     })
-        // wx.navigateTo({
-        //     url: '../back/back?bookId='+"1000001"
-        // })
   },
   addBook:function(){
     //扫码加书
@@ -85,7 +126,7 @@ Page({
   },
   authSet:function(callback){
       var self = this;
-      console.log("***********authorize");
+      //console.log("***********authorize");
       wx.authorize({
           scope: 'scope.userLocation',
           success() {
@@ -96,6 +137,7 @@ Page({
       })
   },
   getLocation:function(){
+    //获取当前位置
       var self = this;
       console.log("*********getLocation*****");
       wx.getLocation({
@@ -161,5 +203,10 @@ Page({
     let url = config.setAddress;
     //TODO 这里参数不是openId,应该是3rd_session
     /* util.doPost(url,data,success);*/
+  },
+  createInviteCode:function(){
+     //TODO,获取小程序二维码，包含邀请码
+     //在首页执行返回操作，会关闭小程序
+     //wx.navigateBack();
   }
 })
