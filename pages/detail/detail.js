@@ -40,24 +40,6 @@ Page({
   bindTextAreaBlur:function(e){
     console.log(e.detail.value)
   },
-  bindPickerTheme: function (e) {
-    var that = this;
-    that.setData({
-      index1: e.detail.value
-    })
-  },
-  bindPickerAge: function (e) {
-    var that = this;
-    that.setData({
-      index2: e.detail.value
-    })
-  },
-  bindPickerStatu:function(e){
-    var that = this;
-    that.setData({
-      index3: e.detail.value
-    })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

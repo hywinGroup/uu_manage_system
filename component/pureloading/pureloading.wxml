@@ -1,0 +1,5 @@
+<template name="pureloading">
+	<view class="loading-bg">
+		<view class="loading-img"></view>
+	</view>
+</template>

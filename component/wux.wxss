@@ -1,3 +1,6 @@
+/*
 @import './dialog/dialog.wxss';
 @import './loading/loading.wxss';
 @import './animate.wxss';
+*/
+@import './pureloading/pureloading.wxss'
