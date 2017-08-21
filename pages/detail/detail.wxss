@@ -105,4 +105,5 @@
 }
 .oprate-btns .btn-primary{
 	width:80%;
+  background: linear-gradient(#de2d3b, #c81624,#de2d3b);
 }

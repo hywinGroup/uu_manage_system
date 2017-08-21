@@ -79,7 +79,7 @@
   </view>
   
   <view class="oprate-btns">
-    <button bindTap="bindNewBookInfo" class="btn-primary btn-first" hover-class="btn-primary-hover">发布新书</button>
+    <button bindTap="bindNewBookInfo" class="btn-primary" hover-class="btn-primary-hover">发布新书</button>
   </view>
 
 </scroll-view>
