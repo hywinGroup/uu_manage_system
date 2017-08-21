@@ -1,3 +1,3 @@
 <template name="isResult">
-     <image data-id="{{id}}" src="{{images.small}}" />
+     <image data-id="{{isbn}}" src="{{cover}}" />
 </template>

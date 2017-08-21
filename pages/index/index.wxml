@@ -11,6 +11,13 @@
 	  		<input type="tel" bindinput="changeName" name="tel" placeholder="如：新华书店莘庄店" class="input" placeholder-class="input-placeholder-class"/>
 	  	</view>
   	</view>
+  	<view class="block" wx:if = "{{storeLatitude && storeLongitude}}">
+		<view class="label">地理位置：</view>
+		<view class="detail address">
+	    	<view class="value">纬度:{{storeLatitude}},</view>
+	    	<view class="value">经度:{{storeLongitude}}</view>
+    	</view>
+	</view>
 	<view class="block">
 		<view class="label">借阅地点：</view>
 		<view class="detail address">

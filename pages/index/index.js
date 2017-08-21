@@ -1,3 +1,4 @@
+/*入口主页面*/
 'use strict'
 import util from "../../utils/util";
 import config from "../../config";
@@ -10,7 +11,8 @@ Page({
     storeName:null,
     storeLatitude :null,
     storeLongitude :null,
-    isSuper:false
+    isSuper:false,
+    isOpeningMap:false
   },
   onLoad: function(options) {
     // options 中的 scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
@@ -111,6 +113,10 @@ Page({
   openMap:function(){
     //打开地图，标注当前位置
     var self = this;
+    if(self.data.isOpeningMap) return false;
+    self.setData({
+      isOpeningMap : true
+    });
     wx.getSetting({
         success(res) {
             if (!res.authSetting['scope.userLocation']) {
@@ -171,6 +177,9 @@ Page({
     wx.chooseLocation({
       cancel:function(){
         console.log("取消");
+        self.setData({
+          isOpeningMap : false
+        });
       },
       success:function(res){
         /*
@@ -183,11 +192,15 @@ Page({
         //storeName:res.name,
         self.setData({
           storeLatitude :res.latitude,
-          storeLongitude :res.longitude
+          storeLongitude :res.longitude,
+          isOpeningMap : false
         });
       },
       fail:function(){
         console.log("fail");
+        self.setData({
+          isOpeningMap : false
+        });
       } 
     });
   },

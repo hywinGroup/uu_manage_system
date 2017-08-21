@@ -1,3 +1,6 @@
+/*
+生成书本二维码页面
+*/
 'use strict'
 import QR from "../../utils/qrcode.js";
 

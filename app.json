@@ -5,7 +5,8 @@
     "pages/code/code",
     "pages/back/back",
     "pages/detail/detail",
-    "pages/manage/manage"
+    "pages/manage/manage",
+    "pages/list/list"
   ],
   "window": {    
     "backgroundTextStyle":"light",

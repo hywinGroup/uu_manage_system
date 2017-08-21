@@ -1,3 +1,6 @@
+/*
+管理绘本
+*/
 'use strict'
 import util from "../../utils/util.js";
 import config from "../../config.js";
@@ -22,7 +25,7 @@ Page({
   },
   onLoad: function(options) {
     var self = this;
-    let url = config.getBooksList;
+    let url = config.searchIsbnList;
     let successFuc = function (res) {
       console.log("success");
       self.setData({
@@ -30,6 +33,20 @@ Page({
       })
       console.log(res.data.data);
     };
+    /*
+  {
+    "cover": "https://img1.doubanio.com\/mpic\/s3446498.jpg",
+    "theme": "爷爷变成了幽灵",
+    "intro": "《爷爷变成了幽灵》以平淡的语气表达浓浓的祖孙之情。书中朴实、淡彩的图画，不但感受不到死亡的可怕，反而从中找到了渲泻感情的出口。在感动之余，我们能感受到的是更多的对亲情的怀念与感悟。",
+    "deposit": "2000",
+    "dailyRent": "50",
+    "TotalRent": "2000",
+    "isbn": "9787539420899",
+    "totalNum": 10,
+    "leftNum": 6
+  }
+  9787539420899
+    */
     util.doPost(url,{},successFuc);
   },
   handleToggle: function(e){
@@ -47,10 +64,10 @@ Page({
     })
   },
   goToDetail:function(event){
-      var bookId = event.currentTarget.dataset.id;
-      console.log("book id:"+bookId);
+      var bookIsbn = event.currentTarget.dataset.id;
+      // console.log("book id:"+bookId);
       wx.navigateTo({
-          url: '../detail/detail?id='+bookId
+          url: '../list/list?id='+bookIsbn
       })
   },
   customData: {

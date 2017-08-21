@@ -67,6 +67,10 @@
 .block .address{
   display:flex;
 }
+.block .address .value{
+  font-size:26rpx;
+  line-height: 44rpx;
+}
 .invite-code {
   position: absolute;
   bottom:40rpx;
