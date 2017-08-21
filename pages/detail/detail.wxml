@@ -3,9 +3,9 @@
 	<view class="book-detail">
 			<image class="book-img" src="{{book.images.large}}"  />
       <view class="book-items">
-        <view class="title">小王子</view>
-        <view>作者</view>
-        <view>绘本Id</view>
+        <view class="title">{{book.name}}</view>
+        <view>作者：{{book.author}}</view>
+        <view>绘本ID：{{book.bookId}}</view>
       </view>
   </view>
 
@@ -45,8 +45,12 @@
       </picker>
     </view>
 
-    <view class="section">
+    <!-- <view class="section">
       <label>是否加入首页推荐</label>
+    </view> -->
+    <view class="section">
+        <radio value="y" checked="checked"/>是否加入首页推荐
+        <button class="refreshBtn">刷新推荐</button>
     </view>
 
     <view class="section">
@@ -60,9 +64,22 @@
 
     <view class="section">
       <label>设置价格</label>
+      <view class="rent">
+        <text class="rent-text">押金</text>
+        <input placeholder="0.0"/>
+        <text class="rent-text">元</text>
+      </view>
+      <view class="rent">
+        <text class="rent-text">日租金</text>
+        <input placeholder="0.0"/>
+        <text class="rent-text">元</text>
+      </view>
     </view>
 
   </view>
-
+  
+  <view class="oprate-btns">
+    <button bindTap="bindNewBookInfo" class="btn-primary" hover-class="btn-primary-hover">发布新书</button>
+  </view>
 
 </scroll-view>
