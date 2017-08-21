@@ -57,6 +57,9 @@ Page({
       book: books
     })
   },
+  bindNewBookInfo:function(e){
+
+  },
   bindPickerValue:function(e){
     var self = this;
     var keyname = e.target.dataset.name;
