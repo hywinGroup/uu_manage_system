@@ -1,1 +1,21 @@
-<view>{{text}}</view>
+<scroll-view scroll-y style="height: 100%" bindscrolltoupper="" bindscrolltolower="" bindscroll="" class="list-container">
+	<view bindtap ="goToDetail" class="list-item" wx:for="{{list}}"  wx:for-item="item" wx:key="{{item.bookid}}">
+		<view class="theme">
+		<image src="{{item.cover}}"></image></view>
+		<view class="desc">
+			<view>{{item.theme}}</view>
+			<view>价格：{{item.dailyRent/100}}</view>
+			<view>押金：{{item.deposit/100}}</view>
+		</view>
+		 <view wx:if="{{!item.selected}}" class="select" bindtap="toggleStatus" data-index="{{index}}"><i class="iconfont icon-unselect"></i></view>	
+		<view wx:if="{{item.selected}}" class="select" bindtap="toggleStatus" data-index="{{index}}"><i class="iconfont icon-selected"></i></view> 
+	</view>
+</scroll-view>
+<view class="list-footer">
+	<view class="total-oprate">
+		<button bindtap="addBook" class="btn-primary btn-first" hover-class="btn-primary-hover">上 架</button>
+		<view wx:if="{{!allSelected}}" class="select" bindtap="toggleAllStatus" data-index="{{index}}"><i class="iconfont icon-unselect"></i></view>	
+		<view wx:if="{{allSelected}}" class="select" bindtap="toggleAllStatus" data-index="{{index}}"><i class="iconfont icon-selected"></i></view>	
+	</view>
+</view>
+

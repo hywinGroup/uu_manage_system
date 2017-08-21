@@ -18,7 +18,7 @@
 </view>
 <view class="books-container">
   <import src="../../component/result/result.wxml"/>
-  <view class="book" wx:for-items="{{items}}" wx:key="*this" bindtap="goToDetail" data-id="{{item.id}}">
+  <view class="book" wx:for-items="{{items}}" wx:key="*this" bindtap="goToDetail" data-id="{{item.isbn}}">
     <template is="isResult" data="{{...item}}"/>
   </view>
 </view>
