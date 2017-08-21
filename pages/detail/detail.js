@@ -1,10 +1,8 @@
 'use strict'
+import util from "../../utils/util.js";
+import config from "../../config.js";
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     index:0,
     index1: 0,
@@ -19,14 +17,45 @@ Page({
       age : 0,
       theme: 0,
       status : 0
+    },
+    book:{
+      
     }
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    // let url = config.getBooksList;
+    // let successFuc = function (res) {
+    //   self.setData({
+    //     book: res.data.data
+    //   })
+    //   console.log(res.data.data);
+    // };
+    // util.doPost(url, {}, successFuc);
+    var self = this;
+    let books = {
+      'name': '小王子',
+      'bookId': '绘本ID',
+      'author': '作者',
+      'images': {
+        'small': 'https://img1.doubanio.com/spic/s3390077.jpg',
+        'large': 'https://img1.doubanio.com/lpic/s3390077.jpg',
+        'medium': 'https://img1.doubanio.com/mpic/s3390077.jpg'
+      },
+      'language':'CN',
+      'rightAge':'',
+      'grade':'',
+      'intro':'',
+      'recommend':'',
+      'theme':'',
+      'keyword':'',
+      'type':'',
+      'bookNum':'',
+      'deposit':'',
+      'dailyRent':'',
+    }
+    self.setData({
+      book: books
+    })
   },
   bindPickerValue:function(e){
     var self = this;
@@ -39,6 +68,24 @@ Page({
   },
   bindTextAreaBlur:function(e){
     console.log(e.detail.value)
+  },
+  bindPickerTheme: function (e) {
+    var that = this;
+    that.setData({
+      index1: e.detail.value
+    })
+  },
+  bindPickerAge: function (e) {
+    var that = this;
+    that.setData({
+      index2: e.detail.value
+    })
+  },
+  bindPickerStatu:function(e){
+    var that = this;
+    that.setData({
+      index3: e.detail.value
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
