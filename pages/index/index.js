@@ -76,8 +76,14 @@ Page({
   },
   addBook:function(){
     //扫码加书
-    wx.navigateTo({
-      url: '../detail/detail'
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        var isbn = res.result;
+        wx.navigateTo({
+            url: '../detail/detail?isbn='+isbn
+        })
+      }
     })
   },
   manageBook:function() {

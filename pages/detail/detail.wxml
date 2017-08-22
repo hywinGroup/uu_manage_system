@@ -6,6 +6,7 @@
         <view class="title">{{book.name}}</view>
         <view>作者：{{book.author}}</view>
         <view>绘本ID：{{book.bookId}}</view>
+        <view>ISBN：{{isbn}}</view>
       </view>
   </view>
 

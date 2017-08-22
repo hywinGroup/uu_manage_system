@@ -1,0 +1,30 @@
+.customer-item{
+	display:flex;
+  border-bottom: solid 1px #ccc;
+  padding:30rpx;
+  color:#666;
+  justify-content: space-between;
+}
+.customer-item image{
+  width:100rpx;
+  height:100rpx;
+}
+.customer-item .btn-primary{
+  height:50rpx;
+  line-height: 50rpx;
+  font-size:24rpx;
+  margin-top:25rpx;
+}
+.customer-item .user-info{
+  padding-top:10rpx;
+  line-height: 40rpx;
+}
+.customer-item .user-info span{
+  color:red;
+}
+.customer-item .user-name{
+  font-size:30rpx;
+}
+.customer-item .user-records{
+  font-size:28rpx;
+}

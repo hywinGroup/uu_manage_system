@@ -6,6 +6,7 @@
 	width:100%;
   padding:15rpx 0;
   border-bottom:solid 1px #ccc;
+  justify-content:space-around;
 }
 .list-container .iconfont,.list-footer .iconfont{
 	font-size:36rpx;
@@ -21,7 +22,7 @@
   border-radius:100rpx;
 }
 .list-item .desc{
-  font-size:28rpx;
+  font-size:24rpx;
   color:#666;
   line-height: 40rpx;
   margin-top:20rpx;

@@ -20,9 +20,12 @@ Page({
     },
     book:{
       
-    }
+    },
+    isbn:""
   },
   onLoad: function (options) {
+    //options.isbn;
+    //options.bookid;
     // let url = config.getBooksList;
     // let successFuc = function (res) {
     //   self.setData({
@@ -31,6 +34,7 @@ Page({
     //   console.log(res.data.data);
     // };
     // util.doPost(url, {}, successFuc);
+
     var self = this;
     let books = {
       'name': '小王子',
@@ -54,7 +58,8 @@ Page({
       'dailyRent':'',
     }
     self.setData({
-      book: books
+      book: books,
+      isbn: options.isbn
     })
   },
   bindNewBookInfo:function(e){

@@ -65,7 +65,7 @@ Page({
   },
   goToDetail:function(event){
       var bookIsbn = event.currentTarget.dataset.id;
-      // console.log("book id:"+bookId);
+       console.log("book id:"+bookIsbn);
       wx.navigateTo({
           url: '../list/list?id='+bookIsbn
       })

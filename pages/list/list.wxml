@@ -4,8 +4,8 @@
 		<image src="{{item.cover}}"></image></view>
 		<view class="desc">
 			<view>{{item.theme}}</view>
-			<view>价格：{{item.dailyRent/100}}</view>
-			<view>押金：{{item.deposit/100}}</view>
+			<view>价格：￥{{item.dailyRentF}}/天</view>
+			<view>押金：￥{{item.depositF}}</view>
 		</view>
 		 <view wx:if="{{!item.selected}}" class="select" bindtap="toggleStatus" data-index="{{index}}"><i class="iconfont icon-unselect"></i></view>	
 		<view wx:if="{{item.selected}}" class="select" bindtap="toggleStatus" data-index="{{index}}"><i class="iconfont icon-selected"></i></view> 

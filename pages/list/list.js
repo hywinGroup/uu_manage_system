@@ -24,7 +24,9 @@ Page({
           //添加状态
           let obj = res.data.data[i];
           obj = Object.assign(obj, {
-            selected: false
+            selected: false,
+            dailyRentF:(obj.dailyRent/100).toFixed(2),
+            depositF:(obj.deposit/100).toFixed(2)
           });
           res.data.data[i] = obj;
         }
