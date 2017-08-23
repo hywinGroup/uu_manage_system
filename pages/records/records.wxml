@@ -1,0 +1,29 @@
+<view class="records-container">
+<view  class="titles" id="titles">
+	<view class="titles-item" wx:for="{{titles}}" wx:for-item="item" wx:key="*this">
+		<view wx:if="{{index != currentIndex}}" class="title">{{item}}</view>
+		<view wx:if="{{index == currentIndex}}" class="title title-selected">{{item}}</view>
+	</view>
+</view>
+	<swiper bindchange="processSwipe" class="swiper" style="height: {{wHeight?wHeight+'px':'auto'}}">
+		<block wx:for="{{tabs}}" wx:for-item="item" wx:key="{{item.type}}">
+			<swiper-item>
+		      	<scroll-view scroll-y style="height:100%" bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+		      		<view class="records-item" wx:for="{{item.list}}" wx:for-item="el" wx:key="{{el.bookid}}">
+		      			<view>
+		      				<image src = "{{el.cover}}" />
+		      			</view>
+		      			<view class="info">
+		      				<view class="item-title">{{el.theme}}</view>
+		      				<view>绘本押金：<span>￥{{el.depositFormat}}</span></view>
+		      				<view>绘本价格：<span>￥{{el.dailyRentFormat}}</span> / 天</view>
+		      				<view wx:if="{{item.type=='0'}}">已借<span> {{el.day}} </span> 天，需扣押金 <span> ￥{{el.payAmount}} </span></view>
+		      				<view wx:if="{{item.type=='1'}}">共借<span> {{el.day}} </span>天，扣除押金<span> ￥{{el.payAmount}} </span></view>
+		      			</view>
+		      		</view>
+		      	</scroll-view>
+		    </swiper-item>
+		</block>
+	</swiper>
+
+</view>

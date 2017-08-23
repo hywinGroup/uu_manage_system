@@ -11,5 +11,6 @@ module.exports = {
 	setAddress:`${host}`+"/store/setLocation", //设置位置
 	searchBook : `${host}`+"/book/searchBook",  //搜索书籍
 	searchIsbnList:`${host}`+"/book/searchIsbnList", //搜索isbn码值区分的书籍
-	seachListByIsbn:`${host}`+"/book/search/isbn"
+	seachListByIsbn:`${host}`+"/book/search/isbn",
+	orderByUserid : `${host}`+"/order/userid"
 }

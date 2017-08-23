@@ -7,7 +7,8 @@
     "pages/detail/detail",
     "pages/manage/manage",
     "pages/list/list",
-    "pages/customer/customer"
+    "pages/customer/customer",
+    "pages/records/records"
   ],
   "window": {    
     "backgroundTextStyle":"light",

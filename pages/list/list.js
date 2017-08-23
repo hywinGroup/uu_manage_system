@@ -25,8 +25,8 @@ Page({
           let obj = res.data.data[i];
           obj = Object.assign(obj, {
             selected: false,
-            dailyRentF:(obj.dailyRent/100).toFixed(2),
-            depositF:(obj.deposit/100).toFixed(2)
+            dailyRentF:util.formatMoney(obj.dailyRent),
+            depositF:util.formatMoney(obj.deposit)
           });
           res.data.data[i] = obj;
         }

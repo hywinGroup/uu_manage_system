@@ -1,0 +1,54 @@
+.records-container .titles{
+	width:100%;
+  clear:both;
+  position:absolute;
+  top:0;
+  background: #fff;
+}
+.records-container .titles-item{
+  width:50%;
+  float:left;
+}
+.records-container .title{
+  width:100%;
+  text-align: center;
+  border-bottom:solid 2rpx #ccc;
+  line-height: 80rpx;
+  font-size:32rpx;
+  color:#333;
+}
+.records-container .title-selected{
+  color: #f9a63b;
+  border-bottom:solid 2rpx #f9a63b;
+}
+.records-container swiper{
+  position:absolute;
+  top:80rpx;
+  width:100%;
+}
+.records-item{
+  display:flex;
+  border-bottom:solid 1px #ccc;
+  padding:20rpx 30rpx;
+}
+.records-item image{
+  width:160rpx;
+  height:160rpx;
+  border-radius: 80rpx;
+}
+.records-item .info{
+  font-size:26rpx;
+  line-height: 38rpx;
+  margin-top:8rpx;
+  margin-left:20rpx;
+  color:#666;
+}
+.records-item .info span{
+  color:#e2050e;
+  font-size:24rpx;
+}
+.records-item .item-title{
+  font-weight: bolder;
+  color:#333;
+  font-size:28rpx;
+}

@@ -1,12 +1,12 @@
-<scroll-view scroll-y style="height: 100%" bindscrolltoupper="" bindscrolltolower="" bindscroll="" class="customers-container">
-	<view wx:for="{{list}}" wx:for-item="item"  class="customer-item">
+ <scroll-view scroll-y style="height: 100%" bindscrolltoupper="" bindscrolltolower="" bindscroll="" class="customers-container">
+	<view wx:for="{{list}}" wx:for-item="item"  class="customer-item" wx:key="{{item.userId}}">
 		<view class="header"><image src="../../images/header.png"/></view>
 		<view class="user-info">
 			<view class="user-name">{{item.userName}}</view>
 			<view class="user-records">共借 <span>{{item.totalNum}}</span> 本，已还 <span>{{item.backNum}}</span> 本</view>
 		</view>	
 		<view>
-		<button bindtap="" class="btn-primary btn-third" hover-class="btn-primary-hover">交易记录</button>
+		<button bindtap="showRecords" data-id="{{item.userId}}" class="btn-primary btn-third" hover-class="btn-primary-hover">交易记录</button>
 		</view>	
 	</view>
-</scroll-view>
+</scroll-view> 
